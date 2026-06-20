@@ -1,0 +1,81 @@
+<?php declare(strict_types = 1);
+
+// ftm-D:\HTML\Guia_PHP_Practivca_2\test\vendor\larastan\larastan\stubs\common\Database\Eloquent\Concerns\HasEvents.stub
+return \PHPStan\Cache\CacheItem::__set_state(array(
+   'variableKey' => 'v5-2.3.2',
+   'data' => 
+  array (
+    0 => 
+    array (
+      '34e47e6b8ea6e0dcd6e5d59acd99c51e' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'Illuminate\\Database\\Eloquent\\Concerns',
+         'uses' => 
+        array (
+        ),
+         'className' => 'Illuminate\\Database\\Eloquent\\Concerns\\HasEvents',
+         'functionName' => NULL,
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => NULL,
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+      '08729ff46f9253f62fe1702096793c97' => 
+      \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+         'namespace' => 'Illuminate\\Database\\Eloquent\\Concerns',
+         'uses' => 
+        array (
+        ),
+         'className' => 'Illuminate\\Database\\Eloquent\\Concerns\\HasEvents',
+         'functionName' => 'dispatchesEvents',
+         'templatePhpDocNodes' => 
+        array (
+        ),
+         'parent' => 
+        \PHPStan\Analyser\IntermediaryNameScope::__set_state(array(
+           'namespace' => 'Illuminate\\Database\\Eloquent\\Concerns',
+           'uses' => 
+          array (
+          ),
+           'className' => 'Illuminate\\Database\\Eloquent\\Concerns\\HasEvents',
+           'functionName' => NULL,
+           'templatePhpDocNodes' => 
+          array (
+          ),
+           'parent' => NULL,
+           'typeAliasesMap' => 
+          array (
+          ),
+           'bypassTypeAliases' => false,
+           'constUses' => 
+          array (
+          ),
+           'typeAliasClassName' => NULL,
+           'traitData' => NULL,
+        )),
+         'typeAliasesMap' => 
+        array (
+        ),
+         'bypassTypeAliases' => false,
+         'constUses' => 
+        array (
+        ),
+         'typeAliasClassName' => NULL,
+         'traitData' => NULL,
+      )),
+    ),
+    1 => 
+    array (
+      'D:\\HTML\\Guia_PHP_Practivca_2\\test\\vendor\\larastan\\larastan\\stubs\\common\\Database\\Eloquent\\Concerns\\HasEvents.stub' => 'ca69afa75b4178fe7efcd57191bb322a4972818895f94fea4f9fce6eaf8cbd8a',
+    ),
+  ),
+));

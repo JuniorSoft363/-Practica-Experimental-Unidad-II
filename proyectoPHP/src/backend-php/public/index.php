@@ -1,14 +1,20 @@
 <?php
 
-declare(strict_types=1);
+use Illuminate\Foundation\Application;
+use Illuminate\Http\Request;
 
-require __DIR__ . '/../vendor/autoload.php';
+define('LARAVEL_START', microtime(true));
 
-// Punto de entrada (front controller) del backend PHP.
-// Aquí se inicializa el enrutador, la conexión PDO (config/) y las rutas
-// de autenticación (src/Auth) y CRUD (src/Repositories).
+// Determine if the application is in maintenance mode...
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
+}
 
-session_start();
+// Register the Composer autoloader...
+require __DIR__.'/../vendor/autoload.php';
 
-header('Content-Type: text/plain; charset=utf-8');
-echo "Backend PHP activo. Reemplazar con el enrutador real del proyecto.";
+// Bootstrap Laravel and handle the request...
+/** @var Application $app */
+$app = require_once __DIR__.'/../bootstrap/app.php';
+
+$app->handleRequest(Request::capture());
