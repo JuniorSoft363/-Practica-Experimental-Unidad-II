@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  php:
+    build:
+      context: ./php
+    container_name: pfc-php
+    volumes:
+      - ../src/backend-php:/var/www/html
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    environment:
+      DB_HOST: mysql
+      DB_DATABASE: pfc_db
+      DB_USERNAME: pfc_user
+      DB_PASSWORD: pfc_password
+
+  mysql:
+    image: mysql:8.0
+    container_name: pfc-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: pfc_db
+      MYSQL_USER: pfc_user
+      MYSQL_PASSWORD: pfc_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3306:3306"
+    volumes:
+      - pfc_mysql_data:/var/lib/mysql
+
+volumes:
+  pfc_mysql_data:
