@@ -1,2 +1,7 @@
 # -Practica-Experimental-Unidad-II
 GA -- Práctica Experimental Unidad II Semana 7
+
+EQUIPO G
+- FIGUEROA MORALES BRYAN JAVIER
+- ROMERO MENDEZ BRYAM STEVEN
+- VELEZ LOPEZ RICARDO ELIAS
