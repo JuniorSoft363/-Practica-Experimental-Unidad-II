@@ -1,34 +1,19 @@
-# ADR-001: Selección de tecnología de backend
+# ADR-001: Elección de Spring Boot sobre Jakarta EE
 
 ## Estado
-Propuesto / Aceptado _(elegir uno)_
-
-## Fecha
-2026-06-19
+Aceptado
 
 ## Contexto
-
-_Describir el problema que motiva esta decisión: el PFC requiere un backend con autenticación
-segura y CRUD, implementado en PHP 8.x y en una segunda tecnología (ASP.NET Core o
-Java/Spring Boot). ¿Qué restricciones del equipo, del proyecto o del contexto (mercado local,
-hosting disponible, experiencia previa) influyen en la elección?_
+El sistema requiere el desarrollo de un backend REST seguro y escalable, con soporte de persistencia de datos (JPA/Hibernate) y control de acceso robusto (Spring Security, JWT).
 
 ## Decisión
+Se decide adoptar Spring Boot en lugar de Jakarta EE puro.
 
-_Indicar la segunda tecnología elegida (ASP.NET Core o Spring Boot) y resumir por qué._
-
-## Alternativas consideradas
-
-| Alternativa | Ventajas | Desventajas |
-|---|---|---|
-| ASP.NET Core 8 | | |
-| Java / Spring Boot 3 | | |
+## Justificación
+1. **Ecosistema y Productividad**: Spring Boot ofrece configuraciones automáticas (auto-configurations) y componentes modulares (Starters) altamente probados, reduciendo significativamente el tiempo de desarrollo inicial.
+2. **Seguridad y JWT**: Spring Security proporciona un framework maduro para la integración de filtros, autorización a nivel de métodos (con `@PreAuthorize`) y personalización stateless compatible con tokens JWT.
+3. **Soporte de la Comunidad**: Cuenta con mayor documentación y herramientas de integración moderna en comparación con los servidores de aplicaciones Jakarta EE tradicionales.
 
 ## Consecuencias
-
-_Qué implica esta decisión a futuro: mantenimiento, curva de aprendizaje del equipo,
-disponibilidad de hosting, etc._
-
-## Referencias
-
-- Tabla comparativa de tecnologías (ver informe técnico, sección 2.2)
+- **Positivo**: Desarrollo rápido, menor boilerplate, fácil integración con OpenAPI (Springdoc).
+- **Negativo**: Dependencia de un framework específico (vendor lock-in en el ecosistema Spring).
